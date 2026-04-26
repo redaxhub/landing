@@ -8,7 +8,7 @@ export function Header() {
           <img
             src="/brand/redaxhub-logo-transparent.png"
             alt="REDAX Hub"
-            className="h-6 w-auto sm:h-7"
+            className="h-9 w-auto sm:h-10"
           />
         </div>
 
