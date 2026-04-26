@@ -23,3 +23,8 @@ __pycache__/
 # Env
 .env
 .env.*
+
+# Local source assets
+Landing page design.zip
+redaxhublogo.png
+redaxhublogotransparan.png
