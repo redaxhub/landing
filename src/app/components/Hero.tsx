@@ -26,7 +26,7 @@ export function Hero() {
 
             <div className="flex flex-col gap-4 sm:flex-row">
               <a
-                href="https://redax-hub.gitbook.io/redax-hub-docs"
+                href="https://docs.redaxhub.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-gradient px-8 py-3 font-medium text-background transition-opacity hover:opacity-90"
@@ -35,18 +35,18 @@ export function Hero() {
                 <ArrowRight className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com/redaxhub"
+                href="https://github.com/redaxhub/litepaper"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-8 py-3 font-medium transition-colors hover:bg-accent"
               >
                 <Github className="h-5 w-5" />
-                View on GitHub
+                View Litepaper Repo
               </a>
             </div>
 
             <p className="mt-6 text-sm text-muted-foreground">
-              No token. No fundraising round. Building the protocol first.
+              No token. Building the protocol first.
             </p>
           </div>
 

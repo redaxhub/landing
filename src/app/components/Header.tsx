@@ -4,17 +4,21 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl">
       <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-2">
+        <a
+          href="https://redaxhub.com/"
+          className="flex items-center gap-2"
+          aria-label="REDAX Hub Home"
+        >
           <img
             src="/brand/redaxhub-logo-transparent.png"
             alt="REDAX Hub"
             className="h-14 w-auto sm:h-16"
           />
-        </div>
+        </a>
 
         <nav className="flex items-center gap-6">
           <a
-            href="https://redax-hub.gitbook.io/redax-hub-docs"
+            href="https://docs.redaxhub.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-muted-foreground transition-colors hover:text-foreground"

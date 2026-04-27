@@ -22,7 +22,7 @@ export function LitepaperCTA() {
         </p>
 
         <a
-          href="https://redax-hub.gitbook.io/redax-hub-docs"
+          href="https://docs.redaxhub.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-gradient px-12 py-4 text-lg font-medium text-background transition-opacity hover:opacity-90"

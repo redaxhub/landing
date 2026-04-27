@@ -26,9 +26,10 @@ Build output directory: `dist`
 
 ## Public Docs Link
 
-- Litepaper / Docs: https://redax-hub.gitbook.io/redax-hub-docs
+- Litepaper / Docs: https://docs.redaxhub.com/
 
-## Domain Note
+## Production URLs
 
-`redaxhub.com` and `docs.redaxhub.com` DNS connections will be completed later.
+- Landing: https://redaxhub.com/
+- Docs: https://docs.redaxhub.com/
   

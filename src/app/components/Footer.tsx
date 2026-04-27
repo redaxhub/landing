@@ -21,7 +21,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="https://redax-hub.gitbook.io/redax-hub-docs"
+                  href="https://docs.redaxhub.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground transition-colors hover:text-foreground"
@@ -31,22 +31,22 @@ export function Footer() {
               </li>
               <li>
                 <a
+                  href="https://github.com/redaxhub/litepaper"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  Litepaper Repo
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://github.com/redaxhub"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://redax-hub.gitbook.io/redax-hub-docs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  Documentation
+                  GitHub Org
                 </a>
               </li>
             </ul>
@@ -86,15 +86,13 @@ export function Footer() {
               <a className="hover:text-foreground" href="mailto:hello@redaxhub.com">
                 hello@redaxhub.com
               </a>
-              <br />
-              <span className="text-xs">(activation in progress)</span>
             </p>
           </div>
         </div>
 
         <div className="mt-12 border-t border-border/40 pt-8 text-center text-xs text-muted-foreground">
           <p className="mb-2">
-            © 2026 REDAX Hub. This site describes a protocol under development. Not a fundraising prospectus. Not an investment offering. Not a commitment to launch any token.
+            © 2026 REDAX Hub. This site describes infrastructure under development and is provided for informational purposes. Not an investment offering. Not a commitment to launch any token.
           </p>
           <p>v1.0 — 2026-04-26</p>
         </div>

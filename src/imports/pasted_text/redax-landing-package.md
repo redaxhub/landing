@@ -33,7 +33,7 @@ A campaign-based factory for token consolidation and asset migration. Projects o
 ```
 Read the Litepaper
 ```
-(links to `https://redax-hub.gitbook.io/redax-hub-docs`)
+(links to `https://docs.redaxhub.com/`)
 
 **Secondary CTA button (ghost/outline):**
 ```
@@ -43,7 +43,7 @@ View on GitHub
 
 **Below the CTAs, small text:**
 ```
-No token. No fundraising round. Building the protocol first.
+No token. Building the protocol first.
 ```
 
 ---
@@ -379,7 +379,7 @@ Architecture, math, treasury policy, audit strategy, phased rollout — all docu
 ```
 Read the Litepaper →
 ```
-(links to `https://redax-hub.gitbook.io/redax-hub-docs`)
+(links to `https://docs.redaxhub.com/`)
 
 ---
 
@@ -410,12 +410,12 @@ Telegram
 **Column 4 — Contact:**
 ```
 hello@redaxhub.com
-(activation in progress)
+(public contact email)
 ```
 
 **Bottom row, centered, small text:**
 ```
-© 2026 REDAX Hub. This site describes a protocol under development. Not a fundraising prospectus. Not an investment offering. Not a commitment to launch any token.
+© 2026 REDAX Hub. This site describes infrastructure under development and is provided for informational purposes. Not an investment offering. Not a commitment to launch any token.
 
 v1.0 — 2026-04-26
 ```
@@ -555,7 +555,7 @@ Component implementation notes:
 Header.tsx:
 - Sticky top, backdrop-blur, semi-transparent background
 - Logo on the left (uses public/logo.svg)
-- Right side: Litepaper link (external, opens https://redax-hub.gitbook.io/redax-hub-docs), GitHub link (external), X icon link
+- Right side: Litepaper link (external, opens https://docs.redaxhub.com/), GitHub link (external), X icon link
 - On mobile, collapse to hamburger or just keep the icons compact
 
 Hero.tsx:
@@ -605,7 +605,7 @@ Security.tsx:
 LitepaperCTA.tsx:
 - Full-width section with subtle gradient background (use bg-brand-gradient with opacity-10 overlay)
 - Large headline
-- One CTA button linking to https://redax-hub.gitbook.io/redax-hub-docs
+- One CTA button linking to https://docs.redaxhub.com/
 
 Footer.tsx:
 - Four-column layout
