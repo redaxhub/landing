@@ -4,7 +4,11 @@ export function Phase1() {
   const included = [
     "Five PDA types and the full account hierarchy",
     "Precision Sandwich arithmetic with u128 intermediates",
-    "SPL and Token-2022 support, with Transfer Fee handling and Hook allowlist",
+    "SingleProjectMigration only",
+    "ProgramCreatedOutputMint only",
+    "MetaplexMetadataCPI only",
+    "freeze_authority = None",
+    "SPL Token output only",
     "Campaign lifecycle: create, configure, convert, pause, finalize",
     "Three-layer pause (global, campaign, token)",
     "Treasury policy with default Vest-and-Controlled-Execution",
@@ -16,7 +20,8 @@ export function Phase1() {
     "Lock mode and crank-bot operations (Phase 3)",
     "Verified tier UI and registry (Phase 2)",
     "Rate update with timelock (Phase 2)",
-    "Custom output mint extensions (Phase 2)",
+    "Token-2022 output, Transfer Fee handling, and Hook allowlists (Phase 2)",
+    "ExistingOutputMint and multi-project campaign types (Phase 2)",
     "Custom indexer beyond Helius webhooks (Phase 2)",
     "DAO governance (TBD)",
   ];

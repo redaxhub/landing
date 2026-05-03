@@ -43,7 +43,7 @@ export function TreasuryDiscipline() {
         </h2>
 
         <p className="mb-16 max-w-3xl text-lg text-muted-foreground">
-          When the protocol takes a 1% fee on conversions, those tokens accumulate in the campaign treasury. Selling them on the open market would create sell pressure on the new token and harm the very project we just helped launch. So we don't decide. The campaign creator does, at the time the campaign opens. The choice is locked in and immutable.
+          When the protocol takes a 1% fee on conversions, those tokens accumulate in the protocol_fee_vault, REDAX's protocol fee vault. It is not the project treasury; project_treasury is external, off-protocol, and controlled by output_governance. The campaign creator chooses the locked treasury policy at the time the campaign opens.
         </p>
 
         <div className="mb-12 grid gap-6 sm:grid-cols-2">

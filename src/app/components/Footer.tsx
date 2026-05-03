@@ -1,4 +1,4 @@
-import { Github, Twitter, Send } from "lucide-react";
+import { Github, Send } from "lucide-react";
 
 export function Footer() {
   return (
@@ -55,17 +55,6 @@ export function Footer() {
           <div>
             <h4 className="mb-4 font-semibold">Community</h4>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  href="https://x.com/redaxhub"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  <Twitter className="h-4 w-4" />
-                  X (Twitter)
-                </a>
-              </li>
               <li>
                 <a
                   href="https://t.me/redaxhub"

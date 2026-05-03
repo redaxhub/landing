@@ -1,4 +1,4 @@
-import { Github, Twitter } from "lucide-react";
+import { Github } from "lucide-react";
 
 export function Header() {
   return (
@@ -32,14 +32,6 @@ export function Header() {
             className="text-muted-foreground transition-colors hover:text-foreground"
           >
             <Github className="h-5 w-5" />
-          </a>
-          <a
-            href="https://x.com/redaxhub"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground transition-colors hover:text-foreground"
-          >
-            <Twitter className="h-5 w-5" />
           </a>
         </nav>
       </div>

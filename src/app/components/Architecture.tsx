@@ -47,7 +47,7 @@ export function Architecture() {
 
               <rect x="10" y="300" width="140" height="60" rx="8" fill="#1F2937" stroke="url(#archGradient)" strokeWidth="2" />
               <text x="80" y="335" textAnchor="middle" fill="#F3F4F6" fontSize="12" fontWeight="500">
-                CampaignTreasury
+                protocol_fee_vault
               </text>
 
               <rect x="160" y="260" width="130" height="60" rx="8" fill="#1F2937" stroke="url(#archGradient)" strokeWidth="2" />
@@ -67,7 +67,7 @@ export function Architecture() {
             </p>
 
             <p className="text-lg text-muted-foreground">
-              A single conversion executes atomically: the program verifies the campaign is active, receives the legacy token, computes the conversion using u128 precision math, mints the net output to the holder, sends the fee to the campaign treasury, and emits an event. One transaction. One outcome. Irreversible.
+              A single conversion executes atomically: the program verifies the campaign is active, receives the legacy token, computes the conversion using u128 precision math, mints the net output to the holder, sends REDAX's fee to the protocol_fee_vault, and emits an event. The project_treasury remains external and controlled by output_governance.
             </p>
           </div>
         </div>
