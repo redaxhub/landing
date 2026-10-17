@@ -6,7 +6,7 @@ export function Solution() {
       number: "1",
       icon: FileText,
       title: "Create a campaign",
-      description: "A project pays 0.5 SOL, defines accepted tokens, conversion rates, and caps.",
+      description: "A project prepares a fresh output token, opens a campaign, adds accepted legacy tokens with fixed rates and optional caps, sets the metadata once and activates it. No protocol fee is currently charged to open a campaign.",
     },
     {
       number: "2",
@@ -17,8 +17,8 @@ export function Solution() {
     {
       number: "3",
       icon: Settings,
-      title: "Treasury follows policy",
-      description: "The campaign creator chooses how accumulated fees are handled. Locked in advance.",
+      title: "Fees accrue",
+      description: "Each conversion mints 1% of the gross output, rounded down, into REDAX's protocol fee vault. The program has no instruction that sells, swaps, vests or distributes it.",
     },
   ];
 
@@ -32,7 +32,7 @@ export function Solution() {
         </div>
 
         <h2 className="mb-16 text-4xl font-bold sm:text-5xl">
-          Build the migration factory once. Audit it once. Let any project use it.
+          Build the migration infrastructure once, so each project doesn't have to write its own.
         </h2>
 
         <div className="grid gap-8 lg:grid-cols-3">
@@ -45,7 +45,7 @@ export function Solution() {
                     {step.number}
                   </div>
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-border/40">
-                    <Icon className="h-6 w-6 text-brand-gradient" />
+                    <Icon className="h-6 w-6 text-foreground" />
                   </div>
                 </div>
                 <h3 className="mb-3 text-xl font-semibold">{step.title}</h3>
@@ -57,7 +57,7 @@ export function Solution() {
 
         <div className="mt-12 rounded-lg border border-border/40 bg-card/50 p-6">
           <p className="text-center text-sm text-muted-foreground">
-            Fully on-chain. No off-chain database. No centralized backend. The campaign's state, parameters, and history are all readable directly from Solana RPC.
+            Campaign rules and state live on-chain and can be read directly from Solana. The Devnet app is a static web frontend, and only an approved team wallet can create campaigns in it. Token metadata files are hosted off-chain: their address is fixed on-chain, but Solana does not guarantee their content or availability.
           </p>
         </div>
       </div>

@@ -5,23 +5,23 @@ export function Problem() {
   const problems = [
     {
       icon: Users,
-      title: "Trapped users",
-      description: "Holders sit on positions they cannot exit.",
+      title: "Stranded holders",
+      description: "Holders of a retired token often have no clear path to the project's new one.",
     },
     {
       icon: Lock,
-      title: "Locked liquidity",
-      description: "SOL stranded inside dead pools, unreachable in practice.",
+      title: "Risk at the worst moment",
+      description: "Bespoke migration code adds security surface just as holder value moves.",
     },
     {
       icon: Layers,
-      title: "Scattered communities",
-      description: "Good projects with bad timing, no path to relaunch.",
+      title: "Repeated work",
+      description: "Custom migrations can repeat work on rates, caps and conversion logic.",
     },
     {
       icon: TrendingDown,
-      title: "Capital cannot reform",
-      description: "Healthy v2 launches blocked by migration cost.",
+      title: "Migrations that stall",
+      description: "When the cost is too high, communities stay split across old tokens.",
     },
   ];
 
@@ -30,20 +30,20 @@ export function Problem() {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-4 inline-block">
           <span className="text-sm font-medium text-brand-gradient">
-            The dead-token graveyard
+            The migration problem
           </span>
         </div>
 
         <h2 className="mb-6 text-4xl font-bold sm:text-5xl">
-          Solana has a structural problem that the launchpad era left behind.
+          Token migration should not require starting from scratch.
         </h2>
 
         <p className="mb-12 max-w-3xl text-lg text-muted-foreground">
-          Since 2024, millions of tokens have been launched on Solana through permissionless launchpads. Only a small fraction graduate into open-market trading or sustained activity. The rest sit in user wallets and abandoned liquidity pools — illiquid, scattered, and locked.
+          A project that wants to move its holders to a new token has to answer the same questions every time: which old tokens are accepted and at what rate, how the new token is prepared, and how conversions run safely for a community that is watching closely.
         </p>
 
         <p className="mb-16 max-w-3xl text-lg text-muted-foreground">
-          Each project that wants to migrate its community to a new token currently has to do the same things: write a custom Rust program, pay for a dedicated audit, build a custom interface, and coordinate the rollout. This can require significant engineering, audit, interface, and coordination work. Most teams cannot afford it. So the migration never happens.
+          Doing that with one-off code adds engineering work, security surface and coordination overhead at exactly the moment holder value is moving. That cost is one reason migrations that should happen often do not.
         </p>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

@@ -1,41 +1,41 @@
-import { Shield, Target, Award, Trophy, Bug } from "lucide-react";
+import { Shield, Target, Coins, Layers, ListChecks } from "lucide-react";
 
 export function Security() {
   const tiers = [
     {
       icon: Shield,
-      tier: "Tier 1",
-      scope: "Internal hardening",
-      status: "continuous",
-      description: "checked_* arithmetic, Anchor account constraints, proptest, fuzz testing, verifiable build CI.",
+      tier: "Checked math",
+      scope: "Conversion path",
+      status: "program",
+      description: "All conversion math uses checked u128 integers. An overflow rejects the conversion, and a final amount too large for an SPL token amount is refused, never truncated.",
     },
     {
       icon: Target,
-      tier: "Tier 2",
-      scope: "Competitive audit",
-      status: "pre-mainnet",
-      description: "Sherlock or Code4rena contest. Many auditors, parallel review.",
+      tier: "Account validation",
+      scope: "Every instruction",
+      status: "program",
+      description: "Instructions validate their required accounts and signing authorities. PDA derivations, account identities and token authorities are checked where applicable.",
     },
     {
-      icon: Award,
-      tier: "Tier 3",
-      scope: "Boutique audit",
-      status: "mainnet readiness",
-      description: "A focused review by a Solana-specialized firm.",
+      icon: Coins,
+      tier: "Output mint",
+      scope: "Campaign setup",
+      status: "program",
+      description: "The output mint must have the Campaign PDA as its mint authority and no freeze authority. Token-2022 accounts are rejected.",
     },
     {
-      icon: Trophy,
-      tier: "Tier 4",
-      scope: "Premier audit",
-      status: "post-traction",
-      description: "Full-scope audit by a top-tier firm, funded in stages as protocol traction grows.",
+      icon: Layers,
+      tier: "Bounded surface",
+      scope: "Ten instructions",
+      status: "program",
+      description: "No instruction moves accrued fees, changes a rate after it is set or edits metadata after creation. Nothing auto-finalizes.",
     },
     {
-      icon: Bug,
-      tier: "Bug Bounty",
-      scope: "Continuous",
-      status: "post-mainnet",
-      description: "Sherlock Bug Bounty or Immunefi. Reward pool funded from protocol treasury.",
+      icon: ListChecks,
+      tier: "Explicit selection",
+      scope: "Each conversion",
+      status: "program and app",
+      description: "The program converts one selected accepted token per conversion. The app also requires the holder to choose it explicitly, with no default or first-match fallback.",
     },
   ];
 
@@ -49,11 +49,11 @@ export function Security() {
         </div>
 
         <h2 className="mb-12 text-4xl font-bold sm:text-5xl">
-          Audited in tiers. Funded in stages. Public from day one.
+          Not audited. Here is what the program enforces today.
         </h2>
 
         <p className="mb-16 max-w-3xl text-lg text-muted-foreground">
-          We have studied the public audit reports of established Solana auditors operating on similar program archetypes. Several common findings — strict mint validation, rent-exempt calculations, token-program interface unification, slippage guards on DEX integration — were addressed at the architectural level before any code was written.
+          REDAX has not been audited, and no audit engagement is established. An external security review remains a requirement before any mainnet deployment. The controls below describe what the program and app do; they are not an assurance level.
         </p>
 
         <div className="space-y-6">

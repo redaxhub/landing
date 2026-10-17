@@ -18,6 +18,14 @@ export function Header() {
 
         <nav className="flex items-center gap-6">
           <a
+            href="https://app.redaxhub.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Devnet App
+          </a>
+          <a
             href="https://docs.redaxhub.com/"
             target="_blank"
             rel="noopener noreferrer"
@@ -30,6 +38,7 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground transition-colors hover:text-foreground"
+            aria-label="REDAX Hub on GitHub"
           >
             <Github className="h-5 w-5" />
           </a>

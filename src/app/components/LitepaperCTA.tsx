@@ -18,7 +18,7 @@ export function LitepaperCTA() {
         </h2>
 
         <p className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground">
-          Architecture, math, treasury policy, audit strategy, phased rollout — all documented. We're publishing in public because we want feedback, not because we have something to hide.
+          How campaigns work, the conversion math, the fee model, trust boundaries and what Phase 1 does not do. The technical specification is public on GitHub. We publish openly because we want feedback.
         </p>
 
         <a

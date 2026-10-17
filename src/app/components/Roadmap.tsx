@@ -4,24 +4,24 @@ export function Roadmap() {
   const phases = [
     {
       phase: "Phase 1",
-      title: "Burn-only MVP",
-      date: "Q4 2026 target",
-      description: "Devnet → Tier 2 audit → Tier 3 audit → guarded mainnet target. The full conversion engine, in its safest form.",
+      title: "Single-project migration",
+      date: "Current · Solana Devnet",
+      description: "Burn-and-mint migration with an accrue-only 1% fee, running on Solana Devnet with a public Devnet app. Not audited and not on mainnet.",
       badge: null,
     },
     {
-      phase: "Phase 2",
-      title: "Hardening",
-      date: "Q1-Q2 2027 planned",
-      description: "Verified tier, Token-2022 extension allowlist, timelocked rate updates, custom indexer, and bug bounty program planned.",
+      phase: "Readiness",
+      title: "Before any mainnet",
+      date: "No date set",
+      description: "An external security review and multisig custody for the protocol fee authority remain requirements before any mainnet deployment. Neither is complete.",
       badge: null,
     },
     {
-      phase: "Phase 3",
-      title: "Lock and Liquidity Recovery",
-      date: "2027+ conditional",
-      description: "Lock mode introduces a vault for legacy tokens. Crank operations could route accumulated tokens through Solana DEX infrastructure to recover SOL from low-activity pools. Phase 3 raises legal questions we have not yet resolved. We are working with external counsel. If the legal risk is determined to be unmanageable, Phase 3 will be removed or substantially redesigned.",
-      badge: "subject to legal clearance",
+      phase: "Later",
+      title: "Future directions",
+      date: "Not scheduled",
+      description: "Token-2022 support, reuse of existing output mints, consent signals from legacy projects, migrations beyond a single project, and handling of accrued fees beyond accrual may be evaluated. None is implemented, scheduled or committed, and no order is implied.",
+      badge: "non-binding",
     },
   ];
 
@@ -35,7 +35,7 @@ export function Roadmap() {
         </div>
 
         <h2 className="mb-16 text-4xl font-bold sm:text-5xl">
-          Three phases. Each gated. We delay anything that's not ready.
+          What exists today. What is not promised.
         </h2>
 
         <div className="relative space-y-12">
@@ -51,7 +51,7 @@ export function Roadmap() {
                 <div className="mb-2 flex flex-wrap items-center gap-3">
                   <h3 className="text-2xl font-bold">{phase.title}</h3>
                   {phase.badge && (
-                    <Badge variant="outline" className="border-brand-gradient text-brand-gradient">
+                    <Badge variant="outline" className="border-brand-gradient text-foreground">
                       {phase.badge}
                     </Badge>
                   )}

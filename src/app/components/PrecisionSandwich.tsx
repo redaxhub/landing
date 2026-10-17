@@ -9,29 +9,29 @@ export function PrecisionSandwich() {
         </div>
 
         <h2 className="mb-16 text-4xl font-bold sm:text-5xl">
-          No floating point. No silent loss. Conservation of value, provably.
+          No floating point. Explicit rounding. Recorded normalization remainders.
         </h2>
 
         <div className="mb-12 max-w-3xl space-y-6">
           <p className="text-lg text-muted-foreground">
-            Solana programs operate on integers. Every token amount is a raw integer scaled by the token's decimals field. When tokens with different decimals merge, naive division produces truncation loss — fractions of value disappearing on every conversion. Across thousands of conversions, the loss can be substantial.
+            Solana programs operate on integers. Token amounts are raw integers scaled by their decimals. REDAX normalizes the selected legacy amount, applies that token's fixed rational rate and rounds the gross output down to whole output units. Any decimal-normalization remainder is recorded separately in legacy-token units.
           </p>
 
           <p className="text-lg text-muted-foreground">
-            We solve this with a four-stage pipeline: normalize, scale, fee, denormalize. All intermediate calculations use u128. Rounding direction is explicit: floor when the user receives, ceil when the protocol receives. Any sub-unit residue is captured in a per-campaign dust accumulator.
+            Each conversion normalizes decimals, applies the selected legacy token's immutable rate, then splits the gross output. The protocol fee is 1% of gross output, rounded down, and the holder receives the exact rest. Arithmetic uses checked u128 operations; overflow or a holder or fee amount that cannot fit u64 rejects the conversion.
           </p>
         </div>
 
         <div className="mb-6 overflow-hidden rounded-lg border-2 border-transparent bg-card/50 p-8 [background-clip:padding-box,border-box] [background-image:linear-gradient(#111827,#111827),linear-gradient(135deg,#A855F7_0%,#3B82F6_33%,#06B6D4_66%,#10B981_100%)] [background-origin:border-box]">
-          <pre className="overflow-x-auto text-center">
+          <pre className="overflow-x-auto whitespace-pre-wrap text-center">
             <code className="font-mono text-lg text-foreground">
-              sum(legacy_tokens × rate) = sum(user_output + protocol_fee) + dust_residue
+              user_out + fee_out = gross_out
             </code>
           </pre>
         </div>
 
         <p className="max-w-3xl text-sm text-muted-foreground">
-          For any conversion, this invariant holds. No value is created or destroyed by the math. Every fraction is accounted for somewhere. The patterns follow Uniswap V3's FullMath, OpenZeppelin's Math.mulDiv, and the ERC-4626 rounding specification.
+          This holds for every conversion, with fee_out = floor(gross_out × 100 / 10000): the fee split creates or loses no output unit. When a legacy token has more decimals than the output token, the sub-unit leftover of the input is burned with the rest but cannot be converted. It is recorded on that token's configuration, in legacy-token units, and is never minted, transferred or redeemable.
         </p>
       </div>
     </section>

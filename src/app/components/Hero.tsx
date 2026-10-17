@@ -1,4 +1,4 @@
-import { ArrowRight, Github } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
@@ -21,7 +21,7 @@ export function Hero() {
             </h1>
 
             <p className="mb-8 text-lg text-muted-foreground sm:text-xl">
-              A campaign-based factory for token consolidation and asset migration. Projects open campaigns, holders convert old tokens into new ones, all in a single audit-ready program with precise math and atomic execution.
+              Campaign-based token migration infrastructure, built once and reused. In Phase 1, one project opens a migration campaign and its holders convert accepted legacy tokens into one new token, under rules enforced by a single Solana program with checked integer math and an atomic burn-and-mint conversion.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
@@ -35,18 +35,18 @@ export function Hero() {
                 <ArrowRight className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com/redaxhub/litepaper"
+                href="https://app.redaxhub.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-8 py-3 font-medium transition-colors hover:bg-accent"
               >
-                <Github className="h-5 w-5" />
-                View Litepaper Repo
+                Open Devnet App
+                <ArrowRight className="h-5 w-5" />
               </a>
             </div>
 
             <p className="mt-6 text-sm text-muted-foreground">
-              No token. Building the protocol first.
+              No REDAX token. The app runs on Solana Devnet only, and a campaign listed in it is not reviewed, verified or endorsed.
             </p>
           </div>
 

@@ -21,6 +21,16 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
+                  href="https://app.redaxhub.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  Devnet App
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://docs.redaxhub.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -83,7 +93,7 @@ export function Footer() {
           <p className="mb-2">
             © 2026 REDAX Hub. This site describes infrastructure under development and is provided for informational purposes. Not an investment offering. Not a commitment to launch any token.
           </p>
-          <p>v1.0 — 2026-04-26</p>
+          <p>v1.1 — 2026-10-17</p>
         </div>
       </div>
     </footer>

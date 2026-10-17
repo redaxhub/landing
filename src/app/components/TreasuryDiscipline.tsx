@@ -1,31 +1,27 @@
-import { Infinity, Clock, Droplet, Palette } from "lucide-react";
+import { Coins, Clock, Droplet, KeyRound } from "lucide-react";
 import { Card } from "./ui/card";
 
 export function TreasuryDiscipline() {
   const policies = [
     {
-      icon: Infinity,
-      title: "Hold Forever",
-      description: "REDAX never sells. Zero sell pressure. Paper revenue only from this campaign.",
-      isDefault: false,
+      icon: Coins,
+      title: "Accrue only",
+      description: "The REDAX program has no instruction that withdraws, sells, swaps, vests or distributes accrued fees.",
     },
     {
       icon: Clock,
-      title: "Vest and Controlled Execution",
-      description: "90-day vesting cliff. Then gradual release through Solana liquidity infrastructure with MEV-aware broadcasting where supported.",
-      isDefault: true,
+      title: "Nothing scheduled",
+      description: "No sale, vesting, liquidity provision, disbursement or timing is committed for accrued fees.",
     },
     {
       icon: Droplet,
-      title: "Liquidity Injection",
-      description: "Tokens paired with SOL, added as permanent liquidity to the new token's primary AMM pool. Sell pressure: zero.",
-      isDefault: false,
+      title: "No liquidity routing",
+      description: "Phase 1 adds no liquidity and routes nothing through DEXs or AMMs.",
     },
     {
-      icon: Palette,
-      title: "Mixed",
-      description: "Linear combination. For example, 50% Hold, 30% Controlled, 20% LP.",
-      isDefault: false,
+      icon: KeyRound,
+      title: "Custody today",
+      description: "On Devnet, the protocol fee authority is a single operational authority. Multisig custody for production is a future requirement and is not in place.",
     },
   ];
 
@@ -39,11 +35,11 @@ export function TreasuryDiscipline() {
         </div>
 
         <h2 className="mb-12 text-4xl font-bold sm:text-5xl">
-          The campaign creator chooses how their token's fees are handled. We don't.
+          In Phase 1, protocol fees only accrue.
         </h2>
 
         <p className="mb-16 max-w-3xl text-lg text-muted-foreground">
-          When the protocol takes a 1% fee on conversions, those tokens accumulate in the protocol_fee_vault, REDAX's protocol fee vault. It is not the project treasury; project_treasury is external, off-protocol, and controlled by output_governance. The campaign creator chooses the locked treasury policy at the time the campaign opens.
+          Each conversion mints 1% of the gross output, rounded down, into REDAX's protocol fee vault for that campaign's token. The vault is held by REDAX's protocol fee authority, not by the campaign or the project, and it is not the project's treasury. A project's own treasury stays off-protocol: the REDAX program has no field for it and no authority over it.
         </p>
 
         <div className="mb-12 grid gap-6 sm:grid-cols-2">
@@ -52,19 +48,8 @@ export function TreasuryDiscipline() {
             return (
               <Card
                 key={index}
-                className={`relative border p-6 ${
-                  policy.isDefault
-                    ? "border-transparent bg-card/50 [background-clip:padding-box,border-box] [background-image:linear-gradient(#111827,#111827),linear-gradient(135deg,#A855F7_0%,#3B82F6_33%,#06B6D4_66%,#10B981_100%)] [background-origin:border-box]"
-                    : "border-border/40 bg-card"
-                }`}
+                className="relative border border-border/40 bg-card p-6"
               >
-                {policy.isDefault && (
-                  <div className="absolute right-4 top-4">
-                    <span className="rounded-full bg-brand-gradient px-3 py-1 text-xs font-medium text-background">
-                      Default
-                    </span>
-                  </div>
-                )}
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-brand-gradient">
                   <Icon className="h-6 w-6 text-background" />
                 </div>
@@ -76,7 +61,7 @@ export function TreasuryDiscipline() {
         </div>
 
         <p className="max-w-3xl text-sm text-muted-foreground">
-          This policy-by-creator pattern is designed to reduce unnecessary sell pressure while giving campaign creators direct control over treasury handling decisions.
+          Handling accrued fees beyond accrual may be evaluated in the future. Nothing about it is committed, and campaign creators do not choose a fee policy.
         </p>
       </div>
     </section>

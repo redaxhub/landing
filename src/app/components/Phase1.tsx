@@ -2,28 +2,29 @@ import { Check, Circle } from "lucide-react";
 
 export function Phase1() {
   const included = [
-    "Five PDA types and the full account hierarchy",
+    "Ten on-chain instructions and three program-owned state account types",
     "Precision Sandwich arithmetic with u128 intermediates",
     "SingleProjectMigration only",
-    "ProgramCreatedOutputMint only",
-    "MetaplexMetadataCPI only",
+    "A fresh output mint per campaign, with the Campaign PDA as its only mint authority",
+    "Token name, symbol and metadata URI set once via Metaplex, with no update path",
     "freeze_authority = None",
     "SPL Token output only",
     "Campaign lifecycle: create, configure, convert, pause, finalize",
-    "Three-layer pause (global, campaign, token)",
-    "Treasury policy with default Vest-and-Controlled-Execution",
+    "Per-campaign pause and unpause; a protocol emergency authority can also pause",
+    "A 1% protocol fee, rounded down and accrue-only",
     "Static frontend on Vercel, direct RPC reads",
-    "Verifiable build pipeline",
+    "Curated public campaign list; listing is not review or endorsement",
   ];
 
   const deferred = [
-    "Lock mode and crank-bot operations (Phase 3)",
-    "Verified tier UI and registry (Phase 2)",
-    "Rate update with timelock (Phase 2)",
-    "Token-2022 output, Transfer Fee handling, and Hook allowlists (Phase 2)",
-    "ExistingOutputMint and multi-project campaign types (Phase 2)",
-    "Custom indexer beyond Helius webhooks (Phase 2)",
-    "DAO governance (TBD)",
+    "Token-2022 tokens",
+    "Batch conversion",
+    "Reusing an existing output mint",
+    "Migrations across unrelated projects",
+    "Changing a rate after it is set",
+    "On-chain review, verification or endorsement of campaigns",
+    "Any sale, swap, vesting or liquidity use of accrued fees",
+    "Lock, vault or crank mechanisms",
   ];
 
   return (
@@ -36,7 +37,7 @@ export function Phase1() {
         </div>
 
         <h2 className="mb-16 text-4xl font-bold sm:text-5xl">
-          Burn-only MVP. The simplest, safest, most auditable version of the protocol.
+          Phase 1: classic SPL token migration.
         </h2>
 
         <div className="grid gap-8 lg:grid-cols-2">
@@ -55,7 +56,7 @@ export function Phase1() {
           </div>
 
           <div>
-            <h3 className="mb-6 text-xl font-semibold text-muted-foreground">Deferred</h3>
+            <h3 className="mb-6 text-xl font-semibold text-muted-foreground">Not in Phase 1</h3>
             <div className="space-y-4">
               {deferred.map((item, index) => (
                 <div key={index} className="flex gap-3">
